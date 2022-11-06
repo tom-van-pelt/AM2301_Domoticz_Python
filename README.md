@@ -17,14 +17,15 @@ cd
 git clone https://github.com/tom-van-pelt/AM2301_Domoticz_Python.git
 ```
 
-Use crontab to run the script every minute. 
-```crontab -e```
-Select an editor if this is the first time using crontab. nano (1) is recommended.
-Enter the following lines add the end of the opened file:
+### Use crontab to run the script every minute: 
+```
+crontab -e
+```
+Select an editor if this is the first time using crontab (nano (1) is recommended).
+### Enter the following lines add the end of the opened crontab file:
 ```
 #Read out am2301 sensor every minute and send data to Domoticz
 * * * * * /usr/bin/python3 /home/<username>/AM2301_Domoticz_Python/am2301.py
 ```
-Replace <username> with the username of the system.
-TIP: To get the current username execute the following command:
-```echo $USER```
+IMPORTANT: Replace ```<username>``` with the username of the system.\
+TIP: To get the current username, use: ```echo $USER```.
