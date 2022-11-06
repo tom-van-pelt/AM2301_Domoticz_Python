@@ -16,13 +16,20 @@ pip3 install numbers
 cd
 git clone https://github.com/tom-van-pelt/AM2301_Domoticz_Python.git
 ```
+## Change Python file parameters
+There are 2 parameters to be configured before use.
+- Line 9: GPIO pin number has to be changed to the GPIO pin where the signal wire of the AM2301 sensor is connected. Default is GPIO pin 4. Example:\
+Signal wire connected to GPIO Pin 18. In Python script (line 9):\
+```dhtDevice = adafruit_dht.DHT22 (board.D18, use_pulsio=False)```
 
-### Use crontab to run the script every minute: 
+- Line 10: Change number behind ```domoticz_sensor_idx``` to idx number of the dummy 'Temp+Hum'-sensor in Domoticz.
+
+## Use crontab to run the script every minute: 
 ```
 crontab -e
 ```
 Select an editor if this is the first time using crontab (nano (1) is recommended).
-### Enter the following lines add the end of the opened crontab file:
+## Enter the following lines add the end of the opened crontab file:
 ```
 #Read out am2301 sensor every minute and send data to Domoticz
 * * * * * /usr/bin/python3 /home/<username>/AM2301_Domoticz_Python/am2301.py
