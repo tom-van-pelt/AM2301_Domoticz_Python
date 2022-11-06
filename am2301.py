@@ -8,8 +8,7 @@ import numbers
 #change data here / verander data hieronder:
 dhtDevice = adafruit_dht.DHT22 (board.D4, use_pulseio=False) #board.D<number> where <number> is GPIO pin | use_pulsio = false for Raspberry Pi
 domoticz_sensor_idx = 7 #change to dummy sensor idx (Temp+Hum idx)
-printData = False #change to False if you don't want to print information to console
-update_interval = 60.0 #seconds | standard 60 seconds
+printData = False #change to True if you want to print information to console
 
 # ================================================================================================================
 
