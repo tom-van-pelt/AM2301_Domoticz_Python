@@ -17,7 +17,7 @@ cd
 git clone https://github.com/tom-van-pelt/AM2301_Domoticz_Python.git
 ```
 ## Change Python file parameters
-There are 2 parameters to be configured before use.\
+There are 2 parameters to be configured before use.
 ```
 cd AM2301_Domoticz_Python
 nano am2301.py
