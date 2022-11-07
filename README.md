@@ -17,12 +17,18 @@ cd
 git clone https://github.com/tom-van-pelt/AM2301_Domoticz_Python.git
 ```
 ## Change Python file parameters
-There are 2 parameters to be configured before use.
-- Line 9: GPIO pin number has to be changed to the GPIO pin where the signal wire of the AM2301 sensor is connected. Default is GPIO pin 4. Example:\
-Signal wire connected to GPIO Pin 18. In Python script (line 9):\
+There are 2 parameters to be configured before use.\
+```
+cd AM2301_Domoticz_Python
+nano am2301.py
+```
+- Line 9: GPIO pin number has to be changed to the GPIO pin where the signal wire of the AM2301 sensor is connected. Default is GPIO pin 4.\
+Example: Signal wire connected to GPIO Pin 18. In Python script (line 9):\
 ```dhtDevice = adafruit_dht.DHT22 (board.D18, use_pulsio=False)```
 
 - Line 10: Change number behind ```domoticz_sensor_idx``` to idx number of the dummy 'Temp+Hum'-sensor in Domoticz.
+
+Save the file with ```Ctrl + S``` and close the file with ```Ctrl + X```.
 
 ## Use crontab to run the script every minute: 
 ```
