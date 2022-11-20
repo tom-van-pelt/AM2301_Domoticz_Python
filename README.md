@@ -12,6 +12,7 @@ sudo apt upgrade
 pip3 install adafruit-circuitpython-dht
 sudo apt install libgpiod2
 pip3 install urllib3
+pip3 install requests
 cd
 git clone https://github.com/tom-van-pelt/AM2301_Domoticz_Python.git
 ```
