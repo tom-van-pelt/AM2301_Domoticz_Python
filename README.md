@@ -72,5 +72,5 @@ Select an editor if this is the first time using crontab (nano (1) is recommende
 #Read out am2301 sensor every minute and send data to Domoticz
 * * * * * /usr/bin/python3 /home/<username>/AM2301_Domoticz_Python/<filename>
 ```
-IMPORTANT: Replace ```<username>``` with the username of the system and <filename> with the python file to use (what you should have configured).\
+IMPORTANT: Replace ```<username>``` with the username of the system and ```<filename>``` with the python file to use (what you should have configured).\
 TIP: To get the current username, use: ```echo $USER```.
