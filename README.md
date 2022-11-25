@@ -1,11 +1,15 @@
-# AM2301 on Raspberry Pi to Domoticz (Python)
+# AM2301 to Domoticz (Python)
 
 A Python 3 script to send data from AM2301 Temperature + Humidity sensor to Domoticz Dummy sensor.
-## Used websites to write this script: 
+### Used websites to write this script: 
 - https://www.sigmdel.ca/michel/ha/rpi/temp_sensor_en.html
 - https://learn.adafruit.com/dht-humidity-sensing-on-raspberry-pi-with-gdocs-logging/python-setup
+- https://github.com/jingl3s/DHT11-DHT22-Python-library-Orange-PI
 
-## Execute following commands:
+## Raspberry Pi 3(B+) or Raspberry Pi 4(B+)
+Use below tutorial to read the AM2301 sensor on a Raspberry Pi and send the data to Domoticz.
+
+### First execute following commands:
 ```
 sudo apt update
 sudo apt upgrade
@@ -16,11 +20,11 @@ pip3 install requests
 cd
 git clone https://github.com/tom-van-pelt/AM2301_Domoticz_Python.git
 ```
-## Change Python file parameters
+### Change Python file parameters
 There are 2 parameters to be configured before use.
 ```
 cd AM2301_Domoticz_Python
-nano am2301.py
+nano am2301(raspberrypi)(local).py
 ```
 - Line 9: GPIO pin number has to be changed to the GPIO pin where the signal wire of the AM2301 sensor is connected. Default is GPIO pin 4.\
 Example: Signal wire connected to GPIO Pin 18. In Python script (line 9):\
