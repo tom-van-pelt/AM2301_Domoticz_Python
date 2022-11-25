@@ -70,7 +70,7 @@ Select an editor if this is the first time using crontab (nano (1) is recommende
 ### Enter the following lines add the end of the opened crontab file:
 ```
 #Read out am2301 sensor every minute and send data to Domoticz
-* * * * * /usr/bin/python3 /home/<username>/AM2301_Domoticz_Python/am2301.py
+* * * * * /usr/bin/python3 /home/<username>/AM2301_Domoticz_Python/<filename>
 ```
-IMPORTANT: Replace ```<username>``` with the username of the system.\
+IMPORTANT: Replace ```<username>``` with the username of the system and <filename> with the python file to use (what you should have configured).\
 TIP: To get the current username, use: ```echo $USER```.
