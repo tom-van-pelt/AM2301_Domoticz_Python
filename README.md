@@ -26,7 +26,7 @@ There are 2 parameters to be configured before use.
 cd AM2301_Domoticz_Python
 nano am2301(raspberrypi)(local).py
 ```
-- Line 9: GPIO pin number has to be changed to the GPIO pin where the signal wire of the AM2301 sensor is connected. Default is GPIO pin 4.\
+- Line 9: GPIO pin number has to be changed to the GPIO pin where the signal wire (yellow) of the AM2301 sensor is connected. Default is GPIO pin 4.\
 Example: Signal wire connected to GPIO Pin 18. In Python script (line 9):\
 ```dhtDevice = adafruit_dht.DHT22 (board.D18, use_pulsio=False)```
 
@@ -34,7 +34,34 @@ Example: Signal wire connected to GPIO Pin 18. In Python script (line 9):\
 
 Save the file with ```Ctrl + S``` and close the file with ```Ctrl + X```.
 
-## Use crontab to run the script every minute: 
+## Orange Pi Zero (H2+)
+Use below tutorial to read the AM2301 sensor on an Orange Pi Zero H2+ and send the data to Domoticz.
+
+### First execute following commands:
+```
+sudo apt update
+sudo apt upgrade
+sudo apt install libgpiod2
+pip3 install urllib3
+pip3 install requests
+cd
+git clone https://github.com/tom-van-pelt/AM2301_Domoticz_Python.git
+```
+### Change Python file parameters
+There are ... parameters to be configured before use.
+```
+cd AM2301_Domoticz_Python
+nano am2301(orangepi)(remote).py
+```
+- Line 9: GPIO pin number has to be changed to the GPIO pin where the signal wire (yellow) of the AM2301 sensor is connected.\
+Example: Signal wire connected to GPIO Pin 18. In Python script (line 9):\
+```dhtDevice = adafruit_dht.DHT22 (board.D18, use_pulsio=False)```
+
+- Line 10: Change number behind ```domoticz_sensor_idx``` to idx number of the dummy 'Temp+Hum'-sensor in Domoticz.
+
+Save the file with ```Ctrl + S``` and close the file with ```Ctrl + X```.
+
+# Use crontab to run the script every minute: 
 ```
 crontab -e
 ```
