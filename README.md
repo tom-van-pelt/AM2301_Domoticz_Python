@@ -13,6 +13,7 @@ Use below tutorial to read the AM2301 sensor on a Raspberry Pi and send the data
 ```
 sudo apt update
 sudo apt upgrade
+pip3 install --upgrade pip
 pip3 install adafruit-circuitpython-dht
 sudo apt install libgpiod2
 pip3 install urllib3
@@ -41,7 +42,7 @@ Use below tutorial to read the AM2301 sensor on an Orange Pi Zero H2+ and send t
 ```
 sudo apt update
 sudo apt upgrade
-sudo apt install libgpiod2
+pip3 install --upgrade pip
 pip3 install urllib3
 pip3 install requests
 cd
