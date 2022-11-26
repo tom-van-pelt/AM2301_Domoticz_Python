@@ -37,7 +37,7 @@ while readSensor:
                 url = "http://" + ipAddress + ":" + port + "/json.htm?type=command&param=udevice&idx=" + str (domoticz_sensor_idx) + "&nvalue=0&svalue=" + str (temperature_c) + ";" + str (humidity) + ";0"
                 print ("Url:", url)
                 #response = requests.get (url, auth = (username, password)).content
-                response = request.get (url).content
+                response = requests.get (url).content
 
                 # Print the values to the serial port
                 if printData:
