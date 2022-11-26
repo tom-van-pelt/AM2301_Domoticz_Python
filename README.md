@@ -45,6 +45,7 @@ sudo apt upgrade
 pip3 install --upgrade pip
 pip3 install urllib3
 pip3 install requests
+sudo pip3 install pyA20
 cd
 git clone https://github.com/tom-van-pelt/AM2301_Domoticz_Python.git
 ```
